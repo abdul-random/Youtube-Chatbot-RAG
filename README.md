@@ -1,4 +1,4 @@
-# YouTube Chatbot 🎥🤖
+<img width="1543" height="796" alt="Screenshot 2025-08-15 134822" src="https://github.com/user-attachments/assets/e10deeff-7a1b-47a3-8958-79e34c303c77" /># YouTube Chatbot 🎥🤖
 
 A Streamlit-based chatbot that allows you to **ask questions about any YouTube video** using its transcript. It applies a **Retrieval-Augmented Generation (RAG)** pipeline with OpenAI models and FAISS for semantic search.
 
@@ -48,20 +48,26 @@ A Streamlit-based chatbot that allows you to **ask questions about any YouTube v
  streamlit run app.py
 ```
 
+
 ---
 
 ## 🧩 RAG Process Flow
 
-```mermaid
-flowchart TD
-    A[User Query] --> B[Retriever: FAISS]
-    B -->|Fetch relevant transcript chunks| C[Context]
-    A --> D[Chat History]
-    C --> E[Prompt Template]
-    D --> E[Prompt Template]
-    E --> F[LLM (OpenAI GPT)]
-    F --> G[Answer]
-```
+User Query
+   │
+   ▼
+FAISS Retriever ──► Context
+        │              │
+        └── Chat History
+               │
+               ▼
+        Prompt Template
+               │
+               ▼
+               LLM
+               │
+               ▼
+             Answer
 
 **Steps:**
 
