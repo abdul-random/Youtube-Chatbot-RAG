@@ -1,4 +1,4 @@
-<img width="1543" height="796" alt="Screenshot 2025-08-15 134822" src="https://github.com/user-attachments/assets/e10deeff-7a1b-47a3-8958-79e34c303c77" /># YouTube Chatbot 🎥🤖
+# YouTube Chatbot 🎥🤖
 
 A Streamlit-based chatbot that allows you to **ask questions about any YouTube video** using its transcript. It applies a **Retrieval-Augmented Generation (RAG)** pipeline with OpenAI models and FAISS for semantic search.
 
@@ -48,11 +48,11 @@ A Streamlit-based chatbot that allows you to **ask questions about any YouTube v
  streamlit run app.py
 ```
 
-
 ---
 
 ## 🧩 RAG Process Flow
 
+```
 User Query
    │
    ▼
@@ -68,6 +68,7 @@ FAISS Retriever ──► Context
                │
                ▼
              Answer
+```
 
 **Steps:**
 
@@ -76,6 +77,13 @@ FAISS Retriever ──► Context
 3. Chat history is formatted and appended.
 4. Both context and history are passed to the prompt template.
 5. The LLM generates a concise, factual answer.
+
+**Troubleshooting (Mermaid not rendering):**
+
+* **GitHub.com:** Works in the normal README view (not in **Raw** view). Refresh the page if it stalls.
+* **VS Code:** Install the **"Markdown Preview Mermaid Support"** extension (or view on GitHub).
+* **GitHub Enterprise / other platforms:** Mermaid may be disabled by admins or unsupported. In that case, keep the text fallback or add a static image of the diagram.
+* **PyPI / Streamlit / other renderers:** Most do not render Mermaid. Use the text fallback or include a PNG/SVG instead.
 
 ---
 
@@ -120,3 +128,5 @@ youtube-chatbot/
 ## 👩‍💻 Author
 
 Built with ❤️ using Streamlit + LangChain + OpenAI.
+
+Abdul Khalee Shaik
